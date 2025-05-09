@@ -1,137 +1,201 @@
+
 @charset "UTF-8";
+
+/* Fontes Google */
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
-*, 
-*::before,
-*::after{
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
-     text-decoration: none;
+/* Reset básico */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
-body{
-     font-size: 100%;
-     background: linear-gradient(68.15deg, #2F2325 16.62%, #8E5D52 85.61%);
-     
 
+/* ---------- ESTILOS BASE (para celular) ---------- */
+body {
+  font-size: 100%;
+  background: linear-gradient(68.15deg, #2F2325 16.62%, #8E5D52 85.61%);
+  margin: 0 10px;
+  font-family: "Sarala", sans-serif;
 }
-.cabecalho{
-     display: flex;
-     flex-flow: row nowrap;
-     justify-content: space-around;
-     align-items: center;
-     padding: 16px 0;
 
+/* Cabeçalho */
+.cabecalho {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 0;
 }
-.cabecalho-imagem{
-     height: 74px;
-     padding-left: 15px;
-    
-     
-     
-}
-.cabecalho-menu{
-     
-     display: flex;
-     gap: 32px;
-}
-.cabecalho-menu__item:hover {
-     
-     color: #2F2325;
-     transition: color .3s;
 
+.cabecalho-imagem {
+  height: 74px;
+  padding-left: 15px;
 }
-.cabecalho-menu__item{
-     font-family: "Sarala", sans-serif;
-     color: #FFF2E7;
-     font-weight: 400px;
-     font-size: 18px;
+
+.cabecalho-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
 }
-.conteudo{
-     margin-bottom: 48px;
-     border-top: 0.4px solid #FFF2E7;
-}
-.conteudo-principal{
-     display: flex;
-     flex-flow: row nowrap;
-     justify-content: space-around;
-     align-items: center;
-}
-.conteudo-principal__escrito{
-     display: flex;
-     flex-flow: column nowrap;
-     gap:32px;   
-}
-.conteudo-principal__escrito-titulo{
-  font-family: "Righteous", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 64px;
+
+.cabecalho-menu__item {
   color: #FFF2E7;
-  
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 5px;
+  width: 190px;
+  text-align: center;
+  transition: color 0.3s;
 }
-.conteudo-principal__escrito-subtitulo{
-     font-family: "Sarala", sans-serif;
-     font-weight: 400;
-     font-style: normal;
-     font-size: 24px;
-     color: #ECD6C4;
-}
-.conteudo-principal__escrito-botao{
-     background-color: #ECD6C4;
-     width: 180px;
-     height: 60px;
-     border: none;
-     box-shadow: 4px 5px 4px rgba(0, 0, 0, .3);
-     border-radius: 20px;
 
-     font-family: "Sarala", sans-serif;
-     color: #2F2325;
-     font-weight: 400px;
-     font-size: 24px;
+.cabecalho-menu__item:hover {
+  color: #2F2325;
 }
-.conteudo-principal__escrito-botao:hover{
-     background-color: #836166;
-     color: #ECD6C4;
-     transition: backgroud-color .3s;
-}
-.conteudo-principal__imagem{
-     height: 400px;
-}
-.conteudo-secundario{
-     display: flex;
-     flex-flow: column nowrap;
-     gap: 24px;
-     align-items: center;
-     margin-top: 48px;
-     
-}
-.conteudo-secundario__titulo{
-     border-top: 0.4px solid #FFF2E7;
-     padding-top: 48px;
 
-     font-family: "Righteous", sans-serif;
-     font-weight: 400;
-     font-style: normal;
-     font-size: 24px;
-     color: #FFF2E7;
-     margin-bottom: 16px;
+/* Conteúdo principal */
+.conteudo {
+  margin-bottom: 48px;
+  border-top: 0.4px solid #FFF2E7;
 }
-.conteudo-secundario-paragrafo{
-     font-family: "Sarala", sans-serif;
-     color: #ECD6C4;
-     font-weight: 300px;
-     font-size: 18px;
+
+.conteudo-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  margin-top: 32px;
 }
-.rodape{
-     
-     border-top: 0.4px solid  #FFF2E7;
-     padding-top: 48px;
-     padding-bottom: 48px;
+
+.conteudo-principal__escrito {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: center;
 }
-.rodape-imagem{
-     height: 48px;
-     display: block;
-     margin: 0 auto;
+
+.conteudo-principal__escrito-titulo {
+  font-family: "Righteous", sans-serif;
+  font-size: 48px;
+  color: #FFF2E7;
+}
+
+.conteudo-principal__escrito-subtitulo {
+  color: #ECD6C4;
+  font-size: 20px;
+}
+
+.conteudo-principal__escrito-botao {
+  background-color: #ECD6C4;
+  color: #2F2325;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  border-radius: 20px;
+  width: 180px;
+  height: 50px;
+  margin: 0;
+  box-shadow: 4px 5px 4px rgba(0, 0, 0, .3);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.conteudo-principal__escrito-botao:hover {
+  background-color: #836166;
+  color: #ECD6C4;
+}
+
+.conteudo-principal__imagem {
+  height: 200px;
+}
+
+/* Conteúdo secundário */
+.conteudo-secundario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 48px;
+}
+
+.conteudo-secundario__titulo {
+  font-family: "Righteous", sans-serif;
+  font-size: 22px;
+  color: #FFF2E7;
+  border-top: 0.4px solid #FFF2E7;
+  padding-top: 32px;
+  margin-bottom: 16px;
+}
+
+.conteudo-secundario-paragrafo {
+  color: #ECD6C4;
+  font-size: 16px;
+  text-align: center;
+  max-width: 90%;
+}
+
+/* Rodapé */
+.rodape {
+  border-top: 0.4px solid #FFF2E7;
+  padding: 32px 0;
+}
+
+.rodape-imagem {
+  height: 48px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ---------- MELHORIAS PARA TELAS MAIORES ---------- */
+@media (min-width: 700px) {
+  .cabecalho {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .cabecalho-menu {
+    flex-direction: row;
+    gap: 32px;
+    margin-top: 0;
+  }
+
+  .cabecalho-menu__item {
+    background-color: transparent;
+    width: auto;
+    padding: 0;
+  }
+
+  .conteudo-principal {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .conteudo-principal__escrito {
+    text-align: left;
+    gap: 32px;
+  }
+
+  .conteudo-principal__escrito-titulo {
+    font-size: 64px;
+  }
+
+  .conteudo-principal__escrito-subtitulo {
+    font-size: 24px;
+  }
+
+  .conteudo-principal__imagem {
+    height: 400px;
+  }
+
+  .conteudo-secundario__titulo {
+    font-size: 24px;
+  }
+
+  .conteudo-secundario-paragrafo {
+    font-size: 18px;
+    max-width: 600px;
+  }
 }
